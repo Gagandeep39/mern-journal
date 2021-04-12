@@ -9,7 +9,7 @@ import postRoutes from './routes/posts.js';
 dotenv.config();
 
 const app = express();
-app.use(postRoutes);
+app.use('/posts', postRoutes);
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
